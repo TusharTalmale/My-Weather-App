@@ -1,0 +1,167 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Main Container Animation */
+.mainContainer {
+    width: 350px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 1.2s ease-in-out; /* Fade-in Animation */
+}
+
+/* Search Input Styles */
+.searchInput {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border: 2px solid #6c7ae0;
+    border-radius: 8px;
+}
+
+.searchInput input {
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    width: 80%;
+    border-radius: 8px 0 0 8px;
+    outline: none;
+}
+
+/* Button Hover Animation */
+.searchInput button {
+    background-color: #6c7ae0;
+    border: none;
+    padding: 0 16px;
+    border-radius: 0 8px 8px 0;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Button color transition */
+}
+
+.searchInput button:hover {
+    background-color: #5767c1; /* Darker color on hover */
+}
+
+/* Weather Icon Animation */
+.weatherIcon img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    animation: bounce 2s infinite ease-in-out; /* Bounce Animation */
+}
+
+.weatherIcon h2 {
+    font-size: 32px;
+    margin: 0;
+    animation: fadeIn 1.2s ease-in-out; /* Fade-in for text */
+}
+
+/* City Details */
+.cityDetails {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.cityDetails .desc {
+    font-size: 24px;
+    font-weight: bold;
+    animation: fadeInUp 1.5s ease-in-out; /* Slide-up animation for the description */
+}
+
+.cityDetails .date {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Wind and Humidity Details */
+.windDetails {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.humidityBox, .windSpeed {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.humidityBox img, .windSpeed img {
+    width: 40px;
+    height: 40px;
+    animation: fadeIn 1.2s ease-in-out; /* Fade-in animation for icons */
+}
+
+.humidity, .windSpeed {
+    font-size: 14px;
+    color: #333;
+}
+
+.humidity h2, .windSpeed h2 {
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    .mainContainer {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .searchInput input {
+        font-size: 14px;
+    }
+
+    .weatherIcon img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .weatherIcon h2 {
+        font-size: 24px;
+    }
+
+    .cityDetails .desc {
+        font-size: 20px;
+    }
+
+    .cityDetails .date {
+        font-size: 14px;
+    }
+
+    .humidityBox img, .windSpeed img {
+        width: 35px;
+        height: 35px;
+    }
+}
